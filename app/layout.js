@@ -1,6 +1,9 @@
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+import { Schibsted_Grotesk } from "next/font/google";
+const schibsted = Schibsted_Grotesk({ subsets: ["latin"], weight: ["400"] });
 import ParticlesBackground from "./_ui/ParticlesBackground";
+import Header from "./_ui/Header/Header";
 
 export const metadata = {
   title: "GHOUDI Saber | Portfolio",
@@ -14,8 +17,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <body>
+      <body className={schibsted.className}>
         <ParticlesBackground />
+        <Header />
         {children}
         <Analytics />
       </body>

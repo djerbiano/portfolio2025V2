@@ -40,10 +40,7 @@
         "enable": true,
         "mode": "repulse"
       },
-      "onClick": {
-        "enable": true,
-        "mode": "push"
-      },
+
       "resize": true
     },
     "modes": {
