@@ -43,7 +43,7 @@ export default function AboutMe() {
   );
 
   return (
-    <section className={styles.aboutContainer} id="presentation" ref={containerRef} aria-labelledby="about-heading">
+    <section className={styles.aboutContainer} id="presentation" ref={containerRef} aria-labelledby="about-heading" tabIndex={0} >
       <div className={styles.aboutTextContainer} ref={textRef}>
         <h2 className={styles.aboutTitle} id="about-heading">
           PRÉSENTATION
