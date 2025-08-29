@@ -4,6 +4,7 @@ import { Schibsted_Grotesk } from "next/font/google";
 const schibsted = Schibsted_Grotesk({ subsets: ["latin"], weight: ["400"] });
 import ParticlesBackground from "./_ui/ParticlesBackground";
 import Header from "./_ui/Header/Header";
+import Footer from "./_ui/Footer/Footer";
 
 export const metadata = {
   title: "GHOUDI Saber | Portfolio",
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
         <ParticlesBackground />
         <Header />
         {children}
+        <Footer />
         <Analytics />
       </body>
     </html>
