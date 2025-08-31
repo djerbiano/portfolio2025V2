@@ -1,0 +1,91 @@
+.mentionsContent {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+.mentionsContainer {
+  backdrop-filter: blur(60px);
+  background: rgba(20, 20, 20, 0.4);
+  border-radius: 20px;
+  max-width: 900px;
+  width: 100%;
+  padding: 2rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+.title {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.mentionSection {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #333;
+}
+
+.sectionTitle {
+  color: #f8f8f8;
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.link {
+  color: #4dabf7;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.backContainer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.backLink {
+  background: #333;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.backLink:hover {
+  background: #444;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  .mentionsContent {
+    padding: 1.5rem;
+  }
+
+  .mentionsContainer {
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.1rem;
+  }
+
+  .backLink {
+    width: 100%;
+    text-align: center;
+    font-size: 0.95rem;
+    padding: 0.8rem 1rem;
+  }
+}
