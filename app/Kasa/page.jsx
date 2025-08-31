@@ -11,13 +11,13 @@ export default function Kasa() {
         techStack={[
           {
             src: "/ToReact/react.png",
-            alt: "React",
+            alt: "react",
             title: "React",
             link: "https://fr.react.dev",
           },
           {
             src: "/ToReact/sass.png",
-            alt: "Sass",
+            alt: "sass",
             title: "Sass",
             link: "https://sass-lang.com",
           },

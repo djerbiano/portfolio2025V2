@@ -35,11 +35,9 @@
 
 ## ✨ Fonctionnalités
 
-- 🎬 **Animations** → avec GSAP + ScrollTrigger + React-awesome-reveal  
-- 🧑‍💻 **Présentation du stack MERN + Java / Spring Boot**  
+- 🎬 **Animations** → avec GSAP + ScrollTrigger + React-awesome-reveal
 - 🚀 **Effets interactifs** avec tsParticles (nouvelle version)  
 - 💌 **Formulaire de contact** avec validation Zod + envoi via Nodemailer  
 - 📜 **Timeline animée du parcours professionnel**  
 - 💡 **Responsive design**  
 - 📊 **Vercel Analytics** pour le suivi des visiteurs  
-

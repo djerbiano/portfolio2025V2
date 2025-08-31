@@ -75,10 +75,10 @@ export default function ProjectCard({ backgroundImage, title, subtitle, projectL
   return (
     <article className={styles.containerOneProject} ref={containerRef}>
       <div className={styles.imageContainer}>
-        <Image ref={imageRef} src={backgroundImage} alt={title} fill priority className={styles.projectImage} />
+        <Image ref={imageRef} src={backgroundImage} alt={`${title}-image background`} fill priority className={styles.projectImage} />
         {/*start overlay pour mobile */}
         <div className={styles.mobileOverlay}>
-          <p className={styles.mobileTitle}>{title}</p>
+          <h1 className={styles.mobileTitle}>{title}</h1>
           <p className={styles.mobileSubtitle}>{subtitle}</p>
 
           <button
@@ -95,7 +95,7 @@ export default function ProjectCard({ backgroundImage, title, subtitle, projectL
         </div>
         {/* end overlay pour mobile */}
         <div className={styles.contentTextContainer} ref={textContentRef}>
-          <p className={styles.contentDescription}>{title}</p>
+          <h1 className={styles.contentDescription}>{title}</h1>
           <p>{subtitle}</p>
         </div>
 
