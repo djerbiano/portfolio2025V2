@@ -23,7 +23,9 @@
 
   opacity: 0;
 }
-
+.mobileOverlay {
+  display: none;
+}
 .contentTextContainer {
   position: absolute;
   top: 20px;
@@ -150,4 +152,3 @@
     opacity: 0.85;
   }
 }
-
