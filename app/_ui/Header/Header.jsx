@@ -6,11 +6,11 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { CgCloseR } from "react-icons/cg";
 
 const navItems = [
-  { href: "#hero", label: "ACCUEIL" },
-  { href: "#presentation", label: "PRÉSENTATION" },
-  { href: "#realisation", label: "RÉALISATION" },
-  { href: "#experience", label: "EXPÉRIENCE" },
-  { href: "#contact", label: "CONTACT" },
+  { href: "/#hero", label: "ACCUEIL" },
+  { href: "/#presentation", label: "PRÉSENTATION" },
+  { href: "/#realisation", label: "RÉALISATION" },
+  { href: "/#experience", label: "EXPÉRIENCE" },
+  { href: "/#contact", label: "CONTACT" },
 ];
 
 export default function Header() {
