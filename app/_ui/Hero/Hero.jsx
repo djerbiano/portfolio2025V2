@@ -57,9 +57,15 @@ export default function Hero() {
         </h1>
         <h2 className={styles.heroTitle}>Développeur full-stack</h2>
         <p>Specialisé en Next.js et MERN Stack.</p>
-        <button ref={buttonRef} className={styles.highlight} aria-label="Télécharger le CV de Saber GHOUDI">
+        <a
+          href="/cv.pdf"
+          download="CV_Saber_GHOUDI.pdf"
+          ref={buttonRef}
+          className={styles.highlight}
+          aria-label="Télécharger le CV de Saber GHOUDI"
+        >
           Télécharger mon CV
-        </button>
+        </a>
       </div>
     </section>
   );

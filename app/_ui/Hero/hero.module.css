@@ -46,7 +46,9 @@
   font-size: 1.1rem;
   width: max-content;
 }
-
+.highlight:hover {
+  background: linear-gradient(90deg, rgba(27, 214, 224, 1) 0%, rgba(230, 47, 184, 1) 100%);
+}
 .heroTextContainer p span,
 .heroTextContainer h1 span,
 .heroTextContainer h2 span {
@@ -86,9 +88,5 @@
 
   .highlight {
     font-size: 1rem;
-  }
-
-  .highlight:hover {
-    background: linear-gradient(90deg, rgba(27, 214, 224, 1) 0%, rgba(230, 47, 184, 1) 100%);
   }
 }

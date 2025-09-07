@@ -15,6 +15,7 @@ const navItems = [
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState("");
 
   const menuIcon = isMenuOpen ? (
     <CgCloseR color="#ffffff" aria-hidden="true" />
@@ -41,8 +42,12 @@ export default function Header() {
             <Link
               key={item.href}
               href={item.href}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => {
+                setIsMenuOpen(false);
+                setActiveLink(item.href);
+              }}
               aria-label={`Aller à la section ${item.label}`}
+              className={`${styles.navLink} ${activeLink === item.href ? styles.active : ""}`}
             >
               {item.label}
             </Link>
