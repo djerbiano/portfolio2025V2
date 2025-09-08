@@ -42,5 +42,8 @@
     font-size: 1.1rem;
     gap: 10px;
   }
+  .aboutTitle {
+    letter-spacing: 5px;
+  }
 }
 
