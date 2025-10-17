@@ -1,0 +1,49 @@
+.aboutContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  min-height: 100vh;
+  margin-top: 10vh;
+  gap: 3vw;
+  margin: auto;
+}
+
+.aboutTextContainer {
+  width: 50%;
+  word-spacing: 10px;
+  line-height: 1.5;
+}
+
+.aboutTitle {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: left;
+  font-style: italic;
+  letter-spacing: 10px;
+  margin-top: 0;
+}
+
+
+@media (max-width: 768px) {
+  .aboutContainer {
+    flex-direction: column;
+    width: 80vw;
+  }
+
+  .aboutContainer > :last-child {
+    display: none;
+  }
+
+  .aboutTextContainer {
+    width: 100%;
+    padding: 10px;
+    word-spacing: 4px;
+    font-size: 1.1rem;
+    gap: 10px;
+  }
+  .aboutTitle {
+    letter-spacing: 5px;
+  }
+}
+

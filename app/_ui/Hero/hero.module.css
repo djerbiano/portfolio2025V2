@@ -1,0 +1,92 @@
+.heroContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 100vh;
+  margin-top: 10vh;
+  gap: 10vw;
+  margin: auto;
+}
+.personnelImageContainer {
+  width: 50%;
+  max-width: 400px;
+}
+
+.personnelImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 5%;
+}
+.heroTextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  word-spacing: 10px;
+  line-height: 1.5;
+  font-size: 1.4rem;
+  opacity: 0;
+}
+
+.heroTitle {
+  font-size: 1.4rem;
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+}
+
+.highlight {
+  background: linear-gradient(90deg, rgba(230, 47, 184, 1) 0%, rgba(27, 214, 224, 1) 100%);
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+  font-size: 1.1rem;
+  width: max-content;
+}
+.highlight:hover {
+  background: linear-gradient(90deg, rgba(27, 214, 224, 1) 0%, rgba(230, 47, 184, 1) 100%);
+}
+.heroTextContainer p span,
+.heroTextContainer h1 span,
+.heroTextContainer h2 span {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media (max-width: 768px) {
+  .heroContainer {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .heroContainer > :first-child {
+    display: none;
+  }
+
+  .heroTextContainer {
+    width: 80vw;
+    padding: 10px;
+    height: max-content;
+    word-spacing: 4px;
+    font-size: 1.2rem;
+    line-height: 2;
+    gap: 10px;
+  }
+
+  .heroTextContainer button {
+    margin-top: 50px;
+    align-self: center;
+  }
+
+  .heroTitle {
+    font-size: 1em;
+  }
+
+  .highlight {
+    font-size: 1rem;
+  }
+}

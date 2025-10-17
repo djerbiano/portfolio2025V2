@@ -1,0 +1,158 @@
+.containerOneProject {
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  color: black;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  height: 550px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.projectImage {
+  object-fit: cover;
+
+  opacity: 0;
+}
+.mobileOverlay {
+  display: none;
+}
+.contentTextContainer {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  max-width: 45%;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.116);
+  border-radius: 10px;
+  opacity: 0;
+}
+
+.contentDescription {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: lighter;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.contentBtn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.projectButton {
+  background: linear-gradient(90deg, #1bd6e0 0%, #e62fb8 100%);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(27, 214, 224, 0.4);
+  padding: 10px 20px;
+  opacity: 0;
+}
+
+.projectButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(27, 214, 224, 0.6);
+}
+
+.projectButton:focus {
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.techStack {
+  display: flex;
+  gap: 50px;
+  justify-content: flex-end;
+}
+
+.techItem {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+}
+
+.techItem:hover {
+  transform: scale(1.15);
+  background: rgba(255, 255, 255, 0.25);
+  border-color: #1bd6e0;
+}
+@media (max-width: 768px) {
+  .contentTextContainer,
+  .contentBtn {
+    display: none;
+  }
+
+  .mobileOverlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .imageContainer:hover .mobileOverlay,
+  .imageContainer:active .mobileOverlay {
+    opacity: 1;
+  }
+
+  .mobileTitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .mobileSubtitle {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .projectButtonMobile {
+    background: linear-gradient(90deg, #1bd6e0 0%, #e62fb8 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 16px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+  .mobileStack {
+    font-size: 0.9rem;
+    opacity: 0.85;
+  }
+}

@@ -1,0 +1,30 @@
+.containerExperience {
+  width: 90%;
+  min-height: 100vh;
+  padding: 100px 0;
+  margin: auto;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: left;
+  font-style: italic;
+  letter-spacing: 10px;
+  margin-top: 100px;
+}
+
+.verticalTimeline {
+  margin-bottom: 70px;
+  padding: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .containerExperience {
+    padding: 50px 0;
+  }
+
+  .title {
+    letter-spacing: 5px;
+  }
+}
