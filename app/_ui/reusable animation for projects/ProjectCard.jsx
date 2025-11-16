@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import styles from "./animationOneProject.module.css";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -9,20 +9,14 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ProjectCard({ backgroundImage, title, subtitle, projectLink, techStack = [] }) {
-  const containerRef = useRef(null);
-  const imageWrapperRef = useRef(null);
-  const textContentRef = useRef(null);
-  const buttonRef = useRef(null);
-  const buttonMobileRef = useRef(null);
-  const techStackRef = useRef(null);
-
-  const [imageLoaded, setImageLoaded] = useState(false);
+  const containerRef = useRef();
+  const imageRef = useRef();
+  const textContentRef = useRef();
+  const buttonRef = useRef();
+  const techStackRef = useRef();
 
   useGSAP(
     () => {
-     
-      if (!imageLoaded) return;
-
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
@@ -32,9 +26,8 @@ export default function ProjectCard({ backgroundImage, title, subtitle, projectL
         },
       });
 
-    
       tl.fromTo(
-        imageWrapperRef.current,
+        imageRef.current,
         { opacity: 0, scale: 1.3 },
         { opacity: 1, scale: 1, duration: 1.8, ease: "power4.out" }
       )
@@ -45,8 +38,7 @@ export default function ProjectCard({ backgroundImage, title, subtitle, projectL
           "-=1.0"
         )
         .fromTo(
-      
-          [buttonRef.current, buttonMobileRef.current].filter(Boolean),
+          buttonRef.current,
           { y: -80, scale: 1, opacity: 0 },
           {
             y: 0,
@@ -54,7 +46,6 @@ export default function ProjectCard({ backgroundImage, title, subtitle, projectL
             opacity: 1,
             duration: 1,
             ease: "bounce.out",
-            stagger: 0.1,
           },
           "-=0.5"
         )
@@ -84,26 +75,14 @@ export default function ProjectCard({ backgroundImage, title, subtitle, projectL
   return (
     <article className={styles.containerOneProject} ref={containerRef}>
       <div className={styles.imageContainer}>
-     
-        <div ref={imageWrapperRef} className={styles.imageWrapper}>
-          <Image
-            src={backgroundImage}
-            alt={`${title}-image background`}
-            fill
-            priority
-            className={styles.projectImage}
-            onLoadingComplete={() => setImageLoaded(true)} 
-            unoptimized={false} 
-          />
-        </div>
-
-     
+        <Image ref={imageRef} src={backgroundImage} alt={`${title}-image background`} fill priority className={styles.projectImage} />
+        {/*start overlay pour mobile */}
         <div className={styles.mobileOverlay}>
           <h1 className={styles.mobileTitle}>{title}</h1>
           <p className={styles.mobileSubtitle}>{subtitle}</p>
 
           <button
-            ref={buttonMobileRef}
+            ref={buttonRef}
             type="button"
             className={styles.projectButtonMobile}
             onClick={() => openLink(projectLink)}
@@ -114,7 +93,7 @@ export default function ProjectCard({ backgroundImage, title, subtitle, projectL
 
           <p className={styles.mobileStack}>Stack utilisée : {techStack.map((tech) => tech.title).join(", ")}</p>
         </div>
-
+        {/* end overlay pour mobile */}
         <div className={styles.contentTextContainer} ref={textContentRef}>
           <h1 className={styles.contentDescription}>{title}</h1>
           <p>{subtitle}</p>
